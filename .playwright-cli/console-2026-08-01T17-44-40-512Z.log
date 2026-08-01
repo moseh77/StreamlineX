@@ -1,0 +1,12 @@
+[     500ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[    1003ms] [LOG] [Fast Refresh] done in 603ms @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   11120ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   11320ms] [LOG] [HMR] connected @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   11625ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   11892ms] [LOG] [Fast Refresh] done in 375ms @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   11969ms] [WARNING] Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   15206ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:4000/sign-up:0
+[   31059ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   31263ms] [LOG] [Fast Refresh] done in 302ms @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   31435ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   31460ms] [LOG] [Fast Refresh] done in 126ms @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489

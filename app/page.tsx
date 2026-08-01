@@ -1,7 +1,12 @@
-export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center">
-      <h1>STREAMLINEX-AI</h1>
-    </div>
-  );
+import { redirect } from "next/navigation";
+import { auth } from "@clerk/nextjs/server";
+
+export default async function Home() {
+  const { userId } = await auth();
+
+  if (userId) {
+    redirect("/editor");
+  }
+
+  redirect("/sign-in");
 }
