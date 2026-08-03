@@ -28,6 +28,15 @@ All colors are defined as CSS custom properties in `globals.css` and mapped to T
 
 Tailwind utility names map to these variables. Use `bg-base`, `bg-surface`, `text-copy-primary`, `text-copy-muted`, `border-surface-border`, `text-brand`, `bg-accent-dim`, etc.
 
+## Text Contrast
+
+Every piece of user-facing text must stay legible against the surface it renders on. Rules:
+
+- Never use `text-copy-faint` for anything informational or interactive (form previews, hints, status text). Reserve it for purely decorative text where legibility doesn't matter. Default to `text-copy-secondary` or `text-copy-muted` instead.
+- Disabled states must never rely on a blanket `opacity-*` applied to an element that combines a bright background with near-black/near-white text on top of it (e.g. the `Button` `default` variant: `bg-primary` + `text-primary-foreground`). Dimming both together crushes contrast rather than reducing it evenly. Instead, give the disabled state its own explicit background and text color pairing (e.g. a dimmed background token paired with a still-readable text token like `text-copy-secondary`), and cancel the opacity dimming for that combination.
+- When adding a new interactive component (buttons, inputs, badges) or wiring appearance overrides for a third-party component (e.g. Clerk), check the actual rendered contrast of every text/background pairing it introduces — including non-default states like `disabled`, `hover`, and `loading` — not just the resting state.
+- When in doubt, prefer `text-copy-primary` or `text-copy-secondary` over the muted/faint tokens.
+
 ## Typography
 
 | Role      | Font       | CSS Variable        |
@@ -36,6 +45,20 @@ Tailwind utility names map to these variables. Use `bg-base`, `bg-surface`, `tex
 | Code/mono | Geist Mono | `--font-geist-mono` |
 
 Both fonts are loaded via `next/font/google` and applied as CSS variables on the `<html>` element. The base `body` uses Geist Sans with `antialiased`.
+
+### Minimum Sizes & Weights
+
+Small, thin, dim text is the default failure mode in this app — it has already shipped twice (Clerk's default button text, a dialog title/description) before being caught. Treat these as floors, not just defaults:
+
+| Role                              | Minimum          | Default color            |
+| ---------------------------------- | ---------------- | ------------------------- |
+| Page / screen heading (h1)         | `text-2xl` `font-bold`   | `text-copy-primary`       |
+| Dialog / section title             | `text-lg` `font-semibold` | `text-copy-primary`       |
+| Body copy / descriptions           | `text-sm` (never smaller as the primary read) | `text-copy-secondary`     |
+| Buttons                            | `text-sm` `font-medium` | inherits variant           |
+| Incidental annotations (slugs, timestamps, code previews) | `text-xs` `font-mono` allowed | `text-copy-muted` minimum — never `text-copy-faint` |
+
+Never use `text-muted-foreground` (shadcn's default, maps to a dim gray) for anything meant to be read as primary or secondary content — use the app's own `text-copy-secondary` / `text-copy-primary` tokens instead. When adding or editing a **shared** `components/ui/*` primitive (Dialog, Card, etc.), fix its typography defaults there — a fix applied only to one call site will resurface the next time that primitive is used elsewhere.
 
 ## Border Radius
 
