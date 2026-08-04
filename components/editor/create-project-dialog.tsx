@@ -12,11 +12,11 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
-import { slugify } from "@/lib/utils"
 
 interface CreateProjectDialogProps {
   open: boolean
   name: string
+  roomIdPreview: string
   isLoading: boolean
   onNameChange: (value: string) => void
   onOpenChange: (open: boolean) => void
@@ -26,6 +26,7 @@ interface CreateProjectDialogProps {
 export function CreateProjectDialog({
   open,
   name,
+  roomIdPreview,
   isLoading,
   onNameChange,
   onOpenChange,
@@ -56,7 +57,7 @@ export function CreateProjectDialog({
               onChange={(event) => onNameChange(event.target.value)}
             />
             <div className="flex items-center gap-1.5 font-mono text-xs text-copy-muted">
-              <span>{name.trim() ? slugify(name) : "your-project-slug"}</span>
+              <span>{roomIdPreview || "your-room-id"}</span>
               <Pencil className="size-3" />
             </div>
           </div>
