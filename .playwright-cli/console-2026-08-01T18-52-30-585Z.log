@@ -1,0 +1,64 @@
+[   11162ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   12674ms] [LOG] [HMR] connected @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   14307ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   14320ms] [WARNING] Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   16240ms] [LOG] [Fast Refresh] done in 2230ms @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   16876ms] Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/sign-in" tree={[...]} params={{sign-in:[...]}} cacheNode={{rsc:{...}, ...}} ...>
+                <SegmentViewNode type="page" pagePath="sign-in/[[...">
+                  <SegmentTrieNode>
+                  <SignInPage>
+                    <AuthLayout>
+                      <div className="flex min-h...">
+                        <div>
+                        <div className="flex flex-...">
+                          <SignIn>
+                            <withClerk(SignIn) path="/sign-in" routing="path">
+                              <SignIn getContainer={function} path="/sign-in" routing="path" component="SignIn" ...>
+                                <ClerkHostRenderer component="SignIn" mount={function} unmount={function} ...>
++                                 <div ref={{current:null}} data-clerk-component="SignIn">
+                ...
+              ...
+
+    at throwOnHydrationMismatch (http://localhost:4000/_next/static/chunks/0nzi_next_dist_compiled_react-dom_1g4x6az._.js:3318:56)
+    at beginWork (http://localhost:4000/_next/static/chunks/0nzi_next_dist_compiled_react-dom_1g4x6az._.js:6758:918)
+    at runWithFiberInDEV (http://localhost:4000/_next/static/chunks/0nzi_next_dist_compiled_react-dom_1g4x6az._.js:965:74)
+    at performUnitOfWork (http://localhost:4000/_next/static/chunks/0nzi_next_dist_compiled_react-dom_1g4x6az._.js:9555:97)
+    at workLoopConcurrentByScheduler (http://localhost:4000/_next/static/chunks/0nzi_next_dist_compiled_react-dom_1g4x6az._.js:9551:58)
+    at renderRootConcurrent (http://localhost:4000/_next/static/chunks/0nzi_next_dist_compiled_react-dom_1g4x6az._.js:9534:71)
+    at performWorkOnRoot (http://localhost:4000/_next/static/chunks/0nzi_next_dist_compiled_react-dom_1g4x6az._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (http://localhost:4000/_next/static/chunks/0nzi_next_dist_compiled_react-dom_1g4x6az._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:4000/_next/static/chunks/0nzi_next_dist_compiled_0ncotvl._.js:2647:64)
+[   16876ms] [WARNING] The resource https://select-snipe-92.clerk.accounts.dev/npm/@clerk/ui@1/dist/ui.browser.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:4000/sign-in:0
+[   22100ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:4000/sign-in:0
+[   25126ms] [WARNING] The resource https://select-snipe-92.clerk.accounts.dev/npm/@clerk/ui@1/dist/ui.browser.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:4000/sign-in:0
+[   43127ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   44025ms] [LOG] [HMR] connected @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   44954ms] [WARNING] Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   45432ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   45542ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://select-snipe-92.clerk.accounts.dev/v1/environment?__clerk_api_version=2026-05-12&_clerk_js_version=6.25.13&_method=PATCH&__clerk_db_jwt=dvb_3HKIWb7c0JVY60BByaGgw7TyStF:0
+[   47075ms] [LOG] [Fast Refresh] done in 1747ms @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[   50618ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:4000/sign-in:0
+[  112868ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[  112889ms] [LOG] [Fast Refresh] done in 122ms @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[  113065ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[  113086ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[  113419ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489
+[  113425ms] [LOG] [Fast Refresh] done in 133ms @ http://localhost:4000/_next/static/chunks/0nzi_next_dist_0y42cj8._.js:2489

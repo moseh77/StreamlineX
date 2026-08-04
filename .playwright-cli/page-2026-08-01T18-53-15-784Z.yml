@@ -1,0 +1,26 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e3]:
+    - generic [ref=f1e6]: StreamlineX
+    - generic [ref=f1e7]:
+      - generic [ref=f1e8]:
+        - heading "Design systems at the speed of thought." [level=1] [ref=f1e9]
+        - paragraph [ref=f1e10]: Describe your architecture in plain English and map it to a shared canvas your whole team can refine in real time.
+      - list [ref=f1e11]:
+        - listitem [ref=f1e12]:
+          - img [ref=f1e14]
+          - generic [ref=f1e24]:
+            - generic [ref=f1e25]: Visual system diagrams
+            - generic [ref=f1e26]: Map architecture onto a live, shareable canvas.
+        - listitem [ref=f1e27]:
+          - img [ref=f1e29]
+          - generic [ref=f1e34]:
+            - generic [ref=f1e35]: Real-time collaboration
+            - generic [ref=f1e36]: Live cursors and presence across your whole team.
+        - listitem [ref=f1e37]:
+          - img [ref=f1e39]
+          - generic [ref=f1e42]:
+            - generic [ref=f1e43]: AI-assisted architecture
+            - generic [ref=f1e44]: Describe a system in plain English and refine it visually.
+    - paragraph [ref=f1e45]: © 2026 StreamlineX. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=f1e52] [cursor=pointer]:
+    - img [ref=f1e53]
