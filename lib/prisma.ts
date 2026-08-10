@@ -15,7 +15,10 @@ function createPrismaClient(): PrismaClient {
     ) as unknown as PrismaClient
   }
 
-  const adapter = new PrismaPg({ connectionString: databaseUrl })
+  const adapter = new PrismaPg({
+    connectionString: databaseUrl,
+    connectionTimeoutMillis: 10_000,
+  })
   return new PrismaClient({ adapter })
 }
 

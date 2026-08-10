@@ -4,6 +4,7 @@ import { UserButton } from "@clerk/nextjs"
 import { PanelLeftClose, PanelLeftOpen } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { useIsMounted } from "@/hooks/use-is-mounted"
 
 interface EditorNavbarProps {
   isSidebarOpen: boolean
@@ -14,6 +15,8 @@ export function EditorNavbar({
   isSidebarOpen,
   onToggleSidebar,
 }: EditorNavbarProps) {
+  const isMounted = useIsMounted()
+
   return (
     <header className="flex h-14 shrink-0 items-center border-b border-surface-border bg-surface px-3">
       <div className="flex flex-1 items-center justify-start">
@@ -28,7 +31,7 @@ export function EditorNavbar({
       </div>
       <div className="flex flex-1 items-center justify-center" />
       <div className="flex flex-1 items-center justify-end">
-        <UserButton />
+        {isMounted ? <UserButton /> : <div className="size-7" />}
       </div>
     </header>
   )
